@@ -9,10 +9,8 @@ source:
   url: https://github.com/s3fs-fuse/s3fs-fuse/archive/v{{ version }}.tar.gz
   sha256: 2bb9c8cad855df5a877440edac9539bd405850d2a3c366cebd9d1fec6f802e29
   patches:
-    # patches from https://github.com/s3fs-fuse/s3fs-fuse/pull/1365/files
-    - patches/fdcache.cpp.patch
-    - patches/fdcache.h.patch
-    - patches/sighandlers.cpp.patch
+    # See https://github.com/s3fs-fuse/s3fs-fuse/issues/1590
+    - patches/fdcache_entity.h.patch
 
 build:
   number: 0
