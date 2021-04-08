@@ -1,5 +1,5 @@
 {% set name = "s3fs-fuse" %}
-{% set version = "1.87" %}
+{% set version = "1.89" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,14 @@ package:
 
 source:
   url: https://github.com/s3fs-fuse/s3fs-fuse/archive/v{{ version }}.tar.gz
-  sha256: c5e064efb8fb5134a463731a7cf8d7174c93a296957145200347d2f4d9d11985
+  sha256: 2bb9c8cad855df5a877440edac9539bd405850d2a3c366cebd9d1fec6f802e29
   patches:
-    # patches from https://github.com/s3fs-fuse/s3fs-fuse/pull/1365/files
-    - patches/fdcache.cpp.patch
-    - patches/fdcache.h.patch
-    - patches/sighandlers.cpp.patch
+    # See https://github.com/s3fs-fuse/s3fs-fuse/issues/1590
+    - patches/fdcache_entity.h.patch
 
 build:
   number: 0
-  skip: True  # [not linux]
+  skip: true  # [not linux]
 
 requirements:
   build:
