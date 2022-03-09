@@ -8,9 +8,6 @@ package:
 source:
   url: https://github.com/s3fs-fuse/s3fs-fuse/archive/v{{ version }}.tar.gz
   sha256: f130fec375dc6972145c56f53e83ea7c98c82621406d0208a328989e5d900b0f
-  patches:
-    # See https://github.com/s3fs-fuse/s3fs-fuse/issues/1590
-    - patches/fdcache_entity.h.patch
 
 build:
   number: 0
