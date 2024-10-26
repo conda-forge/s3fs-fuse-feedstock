@@ -23,9 +23,11 @@ requirements:
     - pkg-config
   host:
     - libfuse >=2.8.4,<3
-    - libcurl
+    - libcurl >=7.0
     - openssl
-    - libxml2
+    - libxml2 >=2.6
+    - libcrypto >=0.9
+    - zlib
 
 test:
   commands:
