@@ -26,7 +26,6 @@ requirements:
     - libcurl >=7.0
     - openssl
     - libxml2 >=2.6
-    - libcrypto >=0.9
     - zlib
 
 test:
