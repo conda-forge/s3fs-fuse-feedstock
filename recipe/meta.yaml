@@ -10,12 +10,13 @@ source:
   sha256: 46eb3bcc16eff63008ae2c3177765264b88627482bdb978fc3d10e34e9d52284
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make
     - automake
@@ -24,7 +25,7 @@ requirements:
     - libfuse >=2.8.4,<3
     - libcurl
     - openssl
-    - libxml2
+    - libxml2-devel
 
 test:
   commands:
