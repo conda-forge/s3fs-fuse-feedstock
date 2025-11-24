@@ -1,5 +1,5 @@
 {% set name = "s3fs-fuse" %}
-{% set version = "1.94" %}
+{% set version = "1.96" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/s3fs-fuse/s3fs-fuse/archive/v{{ version }}.tar.gz
-  sha256: 46eb3bcc16eff63008ae2c3177765264b88627482bdb978fc3d10e34e9d52284
+  sha256: e11a051f23701445ca99ff0bfbc4e49d8b87c66cdd04a68a1802c2613ba9e3f1
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make
     - automake
