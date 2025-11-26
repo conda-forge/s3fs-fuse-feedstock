@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
-./autogen.sh
+set -ex
+
+# Replicates behavior of autogen.sh when .git is missing
+echo "" > default_commit_hash
+
+# Run autotools commands individually (skipping autoupdate which can fail)
+aclocal
+autoheader
+automake --add-missing
+autoconf
 
 ./configure \
   --prefix=${PREFIX} \
