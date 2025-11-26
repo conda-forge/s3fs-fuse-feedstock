@@ -23,7 +23,7 @@ requirements:
     - automake
     - pkg-config
   host:
-    - libfuse >=2.8.4,<3
+    - libfuse3 >=3.0.0
     - libcurl
     - openssl
     - libxml2
