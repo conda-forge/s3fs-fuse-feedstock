@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
     - git
     - make
+    - autoconf
     - automake
     - pkg-config
   host:
