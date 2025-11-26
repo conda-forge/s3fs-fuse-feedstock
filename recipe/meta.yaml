@@ -18,6 +18,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - git
     - make
     - automake
     - pkg-config
