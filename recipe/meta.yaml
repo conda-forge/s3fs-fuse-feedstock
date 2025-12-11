@@ -10,7 +10,7 @@ source:
   sha256: 28413457cbf923b9b81e546caffabb8edd5c18f263e698ad86f564fd4b5b344d
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -27,7 +27,7 @@ requirements:
     - libfuse3 >=3.0.0
     - libcurl
     - openssl
-    - libxml2
+    - libxml2-devel
     - zlib
 
 test:
